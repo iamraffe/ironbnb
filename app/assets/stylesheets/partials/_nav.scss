@@ -1,0 +1,24 @@
+.navbar{
+  min-height: 75px;
+}
+
+.navbar-brand{
+  height: 75px;
+
+  img{
+    height: 50px;
+    display: inline-block;
+  }
+}
+
+.navbar-nav{
+
+  li{
+    > a{
+        @media(min-width: 768px){
+          padding-top: 27.5px;
+          padding-bottom: 27.5px;
+        }
+    }
+  }
+}
