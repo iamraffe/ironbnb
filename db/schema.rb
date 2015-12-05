@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151205161146) do
+ActiveRecord::Schema.define(version: 20151205161545) do
 
   create_table "flats", force: :cascade do |t|
     t.string   "title"
@@ -19,8 +19,12 @@ ActiveRecord::Schema.define(version: 20151205161146) do
     t.string   "owner"
     t.text     "description"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "picture_url_file_name"
+    t.string   "picture_url_content_type"
+    t.integer  "picture_url_file_size"
+    t.datetime "picture_url_updated_at"
   end
 
 end
