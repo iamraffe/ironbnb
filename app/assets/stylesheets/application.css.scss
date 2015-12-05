@@ -10,7 +10,7 @@
 @import "bootstrap";
 
 // Bootstrap body padding for fixed navbar
-body { padding-top: 75px; }
+body { padding-top: 100px; }
 
 // And finally bootswatch style itself
 @import "bootswatch/lumen/bootswatch";
@@ -18,3 +18,33 @@ body { padding-top: 75px; }
 // Whatever application styles you have go last
 @import "partials/_nav";
 @import "partials/_footer";
+
+html,
+body {
+    height: 100%;
+}
+
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+
+.carousel {
+    height: 500px;
+    margin-top: -25px;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}

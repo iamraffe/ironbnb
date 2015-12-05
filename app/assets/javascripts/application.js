@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
