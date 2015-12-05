@@ -15,5 +15,7 @@ flat_list = [
 ]
 
 flat_list.each do |title, city, owner, description, price, pic_url|
-  Flat.create( title: title, city: city, owner: owner, description: description, price: price)
+  f = Flat.create( title: title, city: city, owner: owner, description: description, price: price)
+  f.picture_url = File.open("#{Rails.root}/public/system/seeds/#{f.id}.jpg")
+  f.save!
 end
