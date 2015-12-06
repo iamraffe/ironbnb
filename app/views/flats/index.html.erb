@@ -47,9 +47,9 @@
 <% @flats.each do |flat|%>
   <div class="col-md-3 col-sm-6">
     <article class="thumbnail home-listing">
-      <%= image_tag flat.picture_url.url(:medium) %>
+      <%= image_tag flat.picture_url.url(:large) %>
       <header class="caption">
-        <h1><%= flat.title %></h1>
+        <h1><%= link_to flat.title, flat_path(flat)  %></h1>
         <h2 class="text-muted"><%= flat.description %></h2>
         <h3><%= flat.price %> &euro;</h3>
       </header>
