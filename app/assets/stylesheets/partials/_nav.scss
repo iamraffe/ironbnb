@@ -22,3 +22,14 @@
     }
   }
 }
+
+.navbar-text{
+  @media(min-width: 768px){
+    margin-top: 27.5px;
+    margin-bottom: 27.5px;
+  }
+}
+
+.navbar-toggle{
+  margin-top: 20px;
+}
