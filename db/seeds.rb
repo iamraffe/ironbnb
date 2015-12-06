@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
   # Commented introductory code
+user = User.create! :name => 'John Doe', :email => 'john@gmail.com', :password => 'topsecret', :password_confirmation => 'topsecret'
 
 flat_list = [
   [ "Sunny terrace", "Madrid", "John Lennon", "One bedroom, one bathroom, this amazing flat has a huge terrace to drink tea. Pets allowed!", 100],
@@ -14,8 +15,10 @@ flat_list = [
   [ "House with a pool 4r 3b", "Málaga", "Paul McCartney", "Modern house with endless pool in the most exclusive neighborhood", 150]
 ]
 
-flat_list.each do |title, city, owner, description, price, pic_url|
+flat_list.each do |title, city, owner, description, price|
   f = Flat.create( title: title, city: city, owner: owner, description: description, price: price)
   f.picture_url = File.open("#{Rails.root}/public/system/seeds/#{f.id}.jpg")
+  f.user_id = 1
   f.save!
 end
+
